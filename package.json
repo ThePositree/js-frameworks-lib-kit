@@ -1,6 +1,6 @@
 {
   "name": "js-frameworks-lib-kit",
-  "version": "0.0.0",
+  "version": "0.0.1-0",
   "scripts": {
     "build:react": "npm run build -w react",
     "build:playground-next": "npm run build -w playground-next",
