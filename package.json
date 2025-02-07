@@ -1,0 +1,36 @@
+{
+  "name": "js-frameworks-lib-kit",
+  "version": "0.0.1-0",
+  "scripts": {
+    "build:react": "npm run build -w react",
+    "build:playground-next": "npm run build -w playground-next",
+    "build:playground-react": "npm run build -w playground-react",
+    "build": "npm run build:react && npm run build:playground-next && npm run build:playground-react",
+    "dev:playground-next": "npm run dev -w playground-next",
+    "dev:playground-react": "npm run dev -w playground-react",
+    "dev:react": "npm run dev -w react",
+    "run:playground-next": "npx concurrently \"npm run dev:react\" \"npm run dev:playground-next\"",
+    "run:playground-react": "npx concurrently \"npm run dev:react\" \"npm run dev:playground-react\"",
+    "dev": "npx concurrently \"npm run dev:react\" \"npm run dev:playground-next\" \"npm run dev:playground-react\""
+  },
+  "workspaces": [
+    "./playground-next",
+    "./playground-react",
+    "./react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThePositree/js-frameworks-lib-kit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThePositree/js-frameworks-lib-kit/issues"
+  },
+  "homepage": "https://github.com/ThePositree/js-frameworks-lib-kit#readme",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
